@@ -90,7 +90,7 @@ window.__require = function e(t, n, o) {
   }, {
     "../Common/Utils": "Utils"
   }],
-  AdjusWithHeight: [function (e, t, n) {
+  AdjusWithHeight: [function (_e, t, n) {
     "use strict";
     cc._RF.push(t, "0fe07DOz8VMcYKlDM2VxHhQ", "AdjusWithHeight");
     var o = this && this.__extends || function () {
@@ -146,7 +146,7 @@ window.__require = function e(t, n, o) {
       }(cc.Component);
     n.default = l, cc._RF.pop()
   }, {}],
-  AniTools: [function (e, t, n) {
+  AniTools: [function (_e, t, _n) {
     "use strict";
     cc._RF.push(t, "f05dbksdAdHtpW4ZpV1zW/T", "AniTools");
     var o = {
@@ -223,7 +223,7 @@ window.__require = function e(t, n, o) {
     };
     window.AniTools = o, cc._RF.pop()
   }, {}],
-  AudioManager: [function (e, t, n) {
+  AudioManager: [function (_e, t, n) {
     "use strict";
     cc._RF.push(t, "3db2d9MuTtO8JRQKnPm9kfu", "AudioManager");
     var o = this && this.__extends || function () {
@@ -323,7 +323,7 @@ window.__require = function e(t, n, o) {
 
         return o(t, e), t.prototype.start = function () {
           this.plane = cc.find("Canvas/playerNode/plane")
-        }, t.prototype.update = function (e) {
+        }, t.prototype.update = function (_e) {
           if (this.plane.y - this.node.y >= this.node.height + cc.winSize.height / 2) {
             for (var t = 0; t < 3; t++) this.node.children[t].removeComponent(cc.BoxCollider);
             a.default.Despawn(this.node.name, this.node)
@@ -334,7 +334,7 @@ window.__require = function e(t, n, o) {
   }, {
     "../Common/PoolManager": "PoolManager"
   }],
-  DataManager: [function (e, t, n) {
+  DataManager: [function (_e, t, n) {
     "use strict";
     cc._RF.push(t, "fd2c5sUJdNElqycZdmzNC7g", "DataManager");
     var o = this && this.__extends || function () {
@@ -434,7 +434,7 @@ window.__require = function e(t, n, o) {
       }(cc.Component);
     n.default = l, cc._RF.pop()
   }, {}],
-  DynamicLoad: [function (e, t, n) {
+  DynamicLoad: [function (_e, t, n) {
     "use strict";
     cc._RF.push(t, "c6f04DncqhJIoWmE4UojNVj", "DynamicLoad");
     var o = this && this.__extends || function () {
@@ -568,7 +568,7 @@ window.__require = function e(t, n, o) {
               i.default.Despawn("DiamondIcon", e)
             }, this)))
           }
-        }, t.prototype.ShakeCamera = function (e, t, n) {
+        }, t.prototype.ShakeCamera = function (_e, _t, _n) {
           this.cameraNode.stopAllActions()
         }, t.prototype.AddScoreEffect = function (e, t) {
           var n = i.default.Spawn("AddScore");
@@ -586,7 +586,7 @@ window.__require = function e(t, n, o) {
               e.stopAllActions(), e.destroy()
             }, this))), r.runAction(cc.sequence(cc.delayTime(.5 * l), cc.fadeOut(.5 * l)))
           }
-        }, t.prototype.StepCloud = function (e, t) {
+        }, t.prototype.StepCloud = function (_e, t) {
           for (var n = a.default.RandomInteger(3, 6), o = 0; o < n; o++) {
             var c = i.default.Spawn("EffectSprite").getComponent("EffectSprite");
             c.node.parent = this.downEffectPartiParent, c.node.position = t.add(cc.v2(a.default.Random(-40, 40), a.default.Random(-15, 15))), c.Reset(), c.SetSprite(r.default.Instance.GetSpriteFrame("cloud"));
@@ -648,7 +648,7 @@ window.__require = function e(t, n, o) {
               i.default.Despawn("EffectSprite", e)
             }, this)))
           }
-        }, t.prototype.LevelUpEff = function (e, t) {
+        }, t.prototype.LevelUpEff = function (e, _t) {
           for (var n = a.default.RandomInteger(27, 36), o = 0; o < n; o++) {
             var c = i.default.Spawn("EffectSprite");
             c.parent = this.downEffectPartiParent;
@@ -694,7 +694,7 @@ window.__require = function e(t, n, o) {
                 u = r.x + a.default.Random(.5 * -cc.winSize.width, .05 * -cc.winSize.width) * n,
                 d = r.y + a.default.Random(100, 500),
                 p = cc.v2(r.x + .8 * (u - r.x), r.y + .5 * (d - r.y) + 200);
-              c.runAction(cc.sequence(cc.spawn(cc.bezierTo(1, [r, p, cc.v2(u, d)]).easing(cc.easeCircleActionOut()), cc.moveBy(2.8, 0, 1.2 * -cc.winSize.height * a.default.Random(.8, 1.2)).easing(cc.easeCubicActionIn()), cc.moveBy(2.8, a.default.Random(0, -300) * n, 0), cc.rotateBy(2, a.default.Random(360, 720) * (2 * Math.round(Math.random()) - 1)), cc.sequence(cc.moveBy(2 * (.1 * Math.random() + .3), (25 * Math.random() + 25) * (2 * Math.round(Math.random()) - 1), 0), cc.moveBy(2 * (.1 * Math.random() + .3), (25 * Math.random() + 25) * (2 * Math.round(Math.random()) - 1), 0), cc.moveBy(2 * (.1 * Math.random() + .3), (25 * Math.random() + 25) * (2 * Math.round(Math.random()) - 1), 0))), cc.callFunc(function (e, t) {
+              c.runAction(cc.sequence(cc.spawn(cc.bezierTo(1, [r, p, cc.v2(u, d)]).easing(cc.easeCircleActionOut()), cc.moveBy(2.8, 0, 1.2 * -cc.winSize.height * a.default.Random(.8, 1.2)).easing(cc.easeCubicActionIn()), cc.moveBy(2.8, a.default.Random(0, -300) * n, 0), cc.rotateBy(2, a.default.Random(360, 720) * (2 * Math.round(Math.random()) - 1)), cc.sequence(cc.moveBy(2 * (.1 * Math.random() + .3), (25 * Math.random() + 25) * (2 * Math.round(Math.random()) - 1), 0), cc.moveBy(2 * (.1 * Math.random() + .3), (25 * Math.random() + 25) * (2 * Math.round(Math.random()) - 1), 0), cc.moveBy(2 * (.1 * Math.random() + .3), (25 * Math.random() + 25) * (2 * Math.round(Math.random()) - 1), 0))), cc.callFunc(function (e, _t) {
                 i.default.Despawn("star", e)
               }, this, this)))
             }
@@ -767,7 +767,7 @@ window.__require = function e(t, n, o) {
             o.Reset(), n.position = e, n.scale = 0, o.SetSprite(r.default.Instance.GetSpriteFrame("ball"), cc.v2(20, 20)), o.node.color = (new cc.Color).fromHEX("#AD0909"), n.setContentSize(a.default.RandomInteger(16, 18), a.default.RandomInteger(16, 18)), n.runAction(cc.sequence(cc.delayTime(.5 * t), cc.delayTime(.5), cc.scaleTo(.1, 0))), n.runAction(cc.sequence(cc.delayTime(.4 * t), cc.scaleTo(.3, 1), cc.moveBy(.6, cc.v2(0, -180)), cc.callFunc(function () {
             }, n)))
           }
-        }, t.prototype.LightBoomAndMove = function (e, t) {
+        }, t.prototype.LightBoomAndMove = function (e, _t) {
           for (var n = a.default.RandomInteger(32, 43), o = 0; o < n; o++) {
             var c = cc.instantiate(i.default.GetPrefab("Lightning"));
             c.parent = this.downEffectPartiParent, c.position = e, c.opacity = 0, c.setContentSize(120, 120), c.scale = a.default.Random(.3, 1.3);
@@ -842,7 +842,7 @@ window.__require = function e(t, n, o) {
               var d = cc.v2(a.default.RandomInteger(0, 80) * r, a.default.RandomInteger(0, 50)),
                 p = a.default.RandomInteger(180, 360) * r,
                 f = a.default.RandomInteger(20, 40);
-              l.runAction(cc.sequence(cc.spawn(cc.sequence(cc.jumpBy(12 / f, d, f, 1), cc.moveBy(5 / f, cc.v2(0, 0))), cc.rotateTo(15 / f, p)), cc.callFunc(function (e) {
+              l.runAction(cc.sequence(cc.spawn(cc.sequence(cc.jumpBy(12 / f, d, f, 1), cc.moveBy(5 / f, cc.v2(0, 0))), cc.rotateTo(15 / f, p)), cc.callFunc(function (_e) {
               }, this)))
             }
           }
@@ -939,7 +939,7 @@ window.__require = function e(t, n, o) {
 
         return o(t, e), t.prototype.onLoad = function () {
           this.camera = cc.find(this.cameraUrl)
-        }, t.prototype.update = function (e) {
+        }, t.prototype.update = function (_e) {
           this.stateCheck && null != this.camera && (!this.startWork && this.InScreen() && (this.startWork = !0), this.startWork && !this.InScreen() && a.default.Despawn("EffectSprite", this.node))
         }, t.prototype.Reset = function () {
           this.startWork = !1, this.stateCheck = !1, this.node.anchorX = .5, this.node.anchorY = .5, this.node.opacity = 255, this.node.angle = 0, this.node.scale = 1, this.node.color = cc.Color.WHITE, this.node.getComponent(cc.Sprite).sizeMode = cc.Sprite.SizeMode.TRIMMED, this.node.stopAllActions(), this.unscheduleAllCallbacks()
@@ -1021,7 +1021,7 @@ window.__require = function e(t, n, o) {
           }).to(1, {
             scale: .9
           }).union().repeatForever().start()
-        }, t.prototype.update = function (e) {
+        }, t.prototype.update = function (_e) {
         }, t.prototype.adsButtonFunc2 = function () {
           if (adLink) {
             window.location.href = adLink
@@ -1063,7 +1063,7 @@ window.__require = function e(t, n, o) {
     "./GameManager": "GameManager",
     "./MainGameUi": "MainGameUi"
   }],
-  GameConfig: [function (e, t, n) {
+  GameConfig: [function (_e, t, _n) {
     "use strict";
     cc._RF.push(t, "f0663sWtfNKCKOL+Hvnt0cI", "GameConfig");
     var o = {
@@ -1158,7 +1158,7 @@ window.__require = function e(t, n, o) {
             this.lineNode.children[0].active = !1,
             this.fruitS = ["PuTaoS", "YingTaoS", "JuZiS", "NingMengS", "MiHouTaoS", "XiHongShiS", "TaoS", "BoLuoS", "YeZiS", "XiGuaS"],
             this.createOneFruit(firstFruit) // 第一个水果
-        }, t.prototype.update = function (e) {
+        }, t.prototype.update = function (_e) {
           a.default.GameUpdateCtrl, this.lineNode.children[0].y - n.Instance.fruitHeigth < 100 && this.lineNode.children[0].y - n.Instance.fruitHeigth >= 0 && (this.lineNode.children[0].active = !0), this.lineNode.children[0].y - n.Instance.fruitHeigth > 100 && (this.lineNode.children[0].active = !1)
         }, t.prototype.end = function () {
           var e = this;
@@ -1231,7 +1231,7 @@ window.__require = function e(t, n, o) {
           }).call(function () {
             null != o.getComponent(cc.PhysicsCircleCollider) && (o.getComponent(cc.PhysicsCircleCollider).radius = o.height / 2, o.getComponent(cc.RigidBody).type = cc.RigidBodyType.Dynamic, o.getComponent(cc.PhysicsCircleCollider).apply())
           }).start(), n.Instance.fruitHeigth = n.Instance.findHighestFruit()
-        }, t.prototype.createFruitSui = function (e, t) {
+        }, t.prototype.createFruitSui = function (_e, _t) {
         }, t.prototype.createFruitL = function (e, t, n) {
           u.default.Instance.Play(3, !1, .5), u.default.Instance.Play(6, !1, .3);
           for (var o = 0; o < 10; o++) {
@@ -1378,7 +1378,7 @@ window.__require = function e(t, n, o) {
           null != n.Instance && n.Instance.destroy(), n.Instance = this, cc.find("Canvas/bgLayer").setContentSize(cc.winSize.width, cc.winSize.height)
         }, t.prototype.start = function () {
           this.PhysicsSystemCtrl(!0, !1)
-        }, t.prototype.update = function (e) {
+        }, t.prototype.update = function (_e) {
         }, t.prototype.lateUpdate = function () {
           this.score = s.default.score
         }, t.prototype.SetScore = function (e) {
@@ -1404,7 +1404,7 @@ window.__require = function e(t, n, o) {
     "./FailedUi": "FailedUi",
     "./MainGameUi": "MainGameUi"
   }],
-  GameUiTools: [function (e, t, n) {
+  GameUiTools: [function (e, t, _n) {
     "use strict";
     cc._RF.push(t, "b21e8tF461OFalpptyeuAE2", "GameUiTools");
     e("GameConfig");
@@ -1430,7 +1430,7 @@ window.__require = function e(t, n, o) {
         e.runAction(cc.sequence(cc.delayTime(n), cc.callFunc(t, e)))
       },
       loadingScene: function (e, t) {
-        t ? cc.loader.loadRes("panel/LoadingLayer", function (t, n) {
+        t ? cc.loader.loadRes("panel/LoadingLayer", function (_t, n) {
           var o = cc.instantiate(n);
           cc.director.getScene().children[0].addChild(o), cc.director.preloadScene(e, function () {
             cc.director.loadScene(e)
@@ -1452,7 +1452,7 @@ window.__require = function e(t, n, o) {
   }, {
     GameConfig: "GameConfig"
   }],
-  HttpManagerJs: [function (e, t, n) {
+  HttpManagerJs: [function (e, t, _n) {
     "use strict";
     var o;
 
@@ -1468,7 +1468,7 @@ window.__require = function e(t, n, o) {
     cc._RF.push(t, "197e1hfNnxIcJx73V3VhUxY", "HttpManagerJs");
     var a = e("GameConfig"),
       i = (c(o = {
-        URL: "http://www.wesane.com/h5service.php/Interface/services",
+        URL: "",
         cacheList: null,
         isBusy: null,
         req: null,
@@ -1589,7 +1589,7 @@ window.__require = function e(t, n, o) {
           null != n.Instance && n.Instance.destroy(), n.Instance = this
         }, t.prototype.start = function () {
           this.openTouch(), this.RockerJS = this.Rocker.getComponent("Rocker")
-        }, t.prototype.update = function (e) {
+        }, t.prototype.update = function (_e) {
         }, t.prototype.openTouch = function () {
           this.node.on(cc.Node.EventType.TOUCH_START, this.onTouchStart, this), this.node.on(cc.Node.EventType.TOUCH_MOVE, this.onTouchMove, this), this.node.on(cc.Node.EventType.TOUCH_END, this.onTouchEnd, this), this.node.on(cc.Node.EventType.TOUCH_CANCEL, this.onTouchEnd, this)
         }, t.prototype.onTouchStart = function (e) {
@@ -1603,7 +1603,7 @@ window.__require = function e(t, n, o) {
           }
         }, t.prototype.onTouchMove = function (e) {
           i.default.playerTouch && null != a.default.Instance.targetFruit && (this.touchNum = 1, a.default.Instance.targetFruit.x = this.node.convertToNodeSpaceAR(e.getLocation()).x)
-        }, t.prototype.onTouchEnd = function (e) {
+        }, t.prototype.onTouchEnd = function (_e) {
           var t = this;
           i.default.playerTouch && null != a.default.Instance.targetFruit && 1 == this.touchNum && (this.touchNum = 0, a.default.Instance.targetFruit.getComponent(cc.PhysicsCircleCollider).radius = a.default.Instance.targetFruit.height / 2, a.default.Instance.targetFruit.getComponent(cc.PhysicsCircleCollider).apply(), a.default.Instance.targetFruit.getComponent(cc.RigidBody).active = true,a.default.Instance.targetFruit.getComponent(cc.RigidBody).type = cc.RigidBodyType.Dynamic, a.default.Instance.targetFruit.getComponent(cc.RigidBody).linearVelocity = cc.v2(0, -800), a.default.Instance.targetFruit = null,
             // 生成指定水果
@@ -1692,7 +1692,7 @@ window.__require = function e(t, n, o) {
         }
 
         return o(t, e), t.prototype.start = function () {
-        }, t.prototype.update = function (e) {
+        }, t.prototype.update = function (_e) {
         }, t.prototype.onCollisionEnter = function (e, t) {
           if ("bazi" == e.node.group) {
             var n;
@@ -1704,15 +1704,15 @@ window.__require = function e(t, n, o) {
             for (var o = 0; o < cc.find("Canvas/baziNode").children.length; o++) cc.find("Canvas/baziNode").children[o].stopAllActions();
             a.default.playerTouch = !1, l.default.Instance.ToEnd(), p.default.Instance.Play(0, !1, 1), p.default.Instance.Play(4, !1, 1)
           }
-        }, t.prototype.onCollisionStay = function (e, t) {
-        }, t.prototype.onCollisionExit = function (e, t) {
+        }, t.prototype.onCollisionStay = function (_e, _t) {
+        }, t.prototype.onCollisionExit = function (_e, _t) {
         }, t.prototype.great = function (e, t) {
           if (Math.abs(e.y - t.y) <= 15) {
             p.default.Instance.Play(1, !1, 1), a.default.tuoweiCtrl = !0, d.default.Instance.InjuredEffect();
             var n = r.default.Spawn("great", cc.find("Canvas/bazieffect"));
             e.x > 0 ? n.position = cc.v2(e.x - 40, e.y) : n.position = cc.v2(e.x + 40, e.y), n.runAction(cc.sequence(cc.spawn(cc.moveBy(.4, 0, 200), cc.rotateBy(.4, 360)), cc.scaleTo(.15, 1.1), cc.scaleTo(.15, 1), cc.fadeOut(.2))), a.default.score += 10, d.default.Instance.SetScoreTween(a.default.score)
           } else p.default.Instance.Play(0, !1, 1), a.default.score += 5, d.default.Instance.SetScoreTween(a.default.score)
-        }, t.prototype.GhostBornEff = function (e, t) {
+        }, t.prototype.GhostBornEff = function (e, _t) {
           for (var n = s.default.RandomInteger(24, 36), o = 0; o < n; o++) {
             var c = r.default.Spawn("star", cc.find("Canvas/downEffParent"));
             c.position = e, c.opacity = 0, c.scale = s.default.Random(.5, 1), c.angle = s.default.Random(0, 360);
@@ -1749,7 +1749,7 @@ window.__require = function e(t, n, o) {
           e.position = cc.v2(s.default.RandomInteger(n, t), o), e.runAction(cc.fadeOut(2))
         }, t.prototype.planeBoomEffect = function () {
           r.default.Spawn("boom", cc.find("Canvas/upEffectParent")).position = s.default.convetOtherNodeSpaceAR(this.node, cc.find("Canvas/upEffectParent"))
-        }, t.prototype.clockEoilffect = function (e, t) {
+        }, t.prototype.clockEoilffect = function (e, _t) {
           for (var n = 0; n < 3; n++) setTimeout(function () {
             var t = r.default.Spawn("star", cc.find("Canvas/upEffectParent"));
             t.position = e.position, t.scale = .3, t.runAction(cc.sequence(cc.scaleTo(.5, 1.1), cc.fadeOut(.5)))
@@ -1770,7 +1770,7 @@ window.__require = function e(t, n, o) {
     "./InputController": "InputController",
     "./MainGameUi": "MainGameUi"
   }],
-  LanguageSetJs: [function (e, t, n) {
+  LanguageSetJs: [function (_e, t, _n) {
     "use strict";
     cc._RF.push(t, "4754e8KuPZJCqklCNyKpG29", "LanguageSetJs");
     t.exports = {
@@ -1787,8 +1787,6 @@ window.__require = function e(t, n, o) {
         gameT1: "\u5173\u6ce8\u6211\u4eec",
         gameT2: "\u7eb8\u724c\u63a5\u9f99",
         gameT3: "\u9526\u4e0a\u6dfb\u82b1",
-        gameUrl1: "http://g.regogame.com/game/9/",
-        gameUrl2: "http://g.regogame.com/game/3/",
         gameT11: "\u5173\u6ce8\u5fae\u4fe1",
         gameT12: "\u5173\u6ce8Kakao",
         gameT13: "\u5173\u6ce8Line",
@@ -1808,8 +1806,6 @@ window.__require = function e(t, n, o) {
         gameT1: "Follow Us",
         gameT2: "Thousand Flower",
         gameT3: "Eliminate Star",
-        gameUrl1: "http://g.fromgame.com/game/53",
-        gameUrl2: "http://g.fromgame.com/game/13",
         gameT11: "Focus WeChat",
         gameT12: "Focus Kakao",
         gameT13: "Focus Line",
@@ -1818,21 +1814,21 @@ window.__require = function e(t, n, o) {
       }
     }, cc._RF.pop()
   }, {}],
-  LoadSceneJs: [function (e, t, n) {
+  LoadSceneJs: [function (_e, t, _n) {
     "use strict";
     cc._RF.push(t, "3ef908fwfNIwJsOjET8tCh2", "LoadSceneJs");
     var o = {
-      goToCover: function (e, t, n, o, c) {
+      goToCover: function (e, _t, n, o, c) {
         var a = e;
         a = null == a || void 0 == a || e, console.log("LoadBoolBeforeLoadS", a), this.needShow = !1, a && a ? (this.needShow = !0, showMyAds()) : this.needShow = !1, this.needShow ? (void 0 == preloader && this.startGoToGame(n, o, c), resCompleteFlag = !0, adCompleteFlag && resCompleteFlag && this.startGoToGame(n, o, c)) : this.startGoToGame(n, o, c)
       },
-      startGoToGame: function (e, t, n) {
+      startGoToGame: function (_e, _t, _n) {
         console.log("goToScene"), noAdGoToScene()
       }
     };
     t.exports = o, cc._RF.pop()
   }, {}],
-  MainGameJS: [function (e, t, n) {
+  MainGameJS: [function (e, t, _n) {
     "use strict";
     cc._RF.push(t, "0e7a8SkMLxEY7nCB1Bqi8WZ", "MainGameJS");
     var o = e("GameConfig"),
@@ -1911,7 +1907,7 @@ window.__require = function e(t, n, o) {
       },
       start: function () {
       },
-      update: function (e) {
+      update: function (_e) {
         this.gameOverGoToOVer()
       },
       gameOverGoToOVer: function () {
@@ -2075,7 +2071,7 @@ window.__require = function e(t, n, o) {
     "./GameFunction": "GameFunction",
     "./EffectCenter": "EffectCenter"
   }],
-  MainManage: [function (e, t, n) {
+  MainManage: [function (e, t, _n) {
     "use strict";
     cc._RF.push(t, "946adGkxvdBmZXnlD952XtK", "MainManage");
     var o = e("HttpManagerJs"),
@@ -2122,7 +2118,6 @@ window.__require = function e(t, n, o) {
         moreGameText: null,
         playAgainText: null,
         endHttpShowInfo: null,
-        moreGameUrl: null,
         init: function (e, t, n) {
           if (!a.publicGameBool) {
             if (a.playNum >= 1) return;
@@ -2143,20 +2138,16 @@ window.__require = function e(t, n, o) {
             i = c.substring(c.lastIndexOf("/game/") + 1, c.length).split("/");
           i.length >= 2 && (a = i[1]), this.gameHttpId = a, cc.log("gameId", a);
           e.substring(e.lastIndexOf("//") + 4, e.lastIndexOf("com") + 3);
-          this.moreGameUrl = "http://m.wesane.com/"
         },
         gameOverShowText: function (e, t) {
-          this.ajaxLoad("http://www.wesane.com/admin.php/Gamescore/saveGamescore", "gameScore=" + e + "&gameId=" + this.gameHttpId + "&gameType=" + t, this.scoreResult)
+          this.ajaxLoad("gameScore=" + e + "&gameId=" + this.gameHttpId + "&gameType=" + t, this.scoreResult)
         },
         gamePV_load: function () {
-          this.ajaxLoad("http://www.wesane.com/admin.php/Activityshow/gamelogo", "gameID=" + this.gameHttpId, this.ajaxOnLogoResult)
+          this.ajaxLoad("/favicon.ico")
         },
         ajaxOnLogoResult: function () {
         },
-        ajaxLoad: function (e, t, n) {
-          var o = cc.loader.getXMLHttpRequest();
-          o.onreadystatechange = n, o.open("POST", e), o.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"), o.send(t)
-        },
+        ajaxLoad: function (_e, _t, _n) {},
         scoreResult: function (e) {
           if (null != e.currentTarget.response && "" != e.currentTarget.response) {
             var t = JSON.parse(e.currentTarget.response);
@@ -2220,7 +2211,7 @@ window.__require = function e(t, n, o) {
     LanguageSetJs: "LanguageSetJs",
     LoadSceneJs: "LoadSceneJs"
   }],
-  NewAttribute: [function (e, t, n) {
+  NewAttribute: [function (_e, t, n) {
     "use strict";
     cc._RF.push(t, "62ee1m0pwFHWpkb09UZL+1E", "NewAttribute");
     var o = this && this.__decorate || function (e, t, n, o) {
@@ -2307,7 +2298,7 @@ window.__require = function e(t, n, o) {
   }, {
     "../Common/PoolManager": "PoolManager"
   }],
-  PlayerInfo: [function (e, t, n) {
+  PlayerInfo: [function (_e, t, n) {
     "use strict";
     cc._RF.push(t, "ea489dPDU9OZYOr2dE1HqB7", "PlayerInfo"), Object.defineProperty(n, "__esModule", {
       value: !0
@@ -2320,7 +2311,7 @@ window.__require = function e(t, n, o) {
     }();
     n.default = o, cc._RF.pop()
   }, {}],
-  PoolManager: [function (e, t, n) {
+  PoolManager: [function (_e, t, n) {
     "use strict";
     cc._RF.push(t, "42678O0bOREZKAMjCljpxI3", "PoolManager");
     var o = this && this.__extends || function () {
@@ -2467,9 +2458,9 @@ window.__require = function e(t, n, o) {
             this.isUpdate = !0, this.setPos()
           }, .5)
         }, t.prototype.update = function (e) {
-          this.isUpdate && this.isUser && (this.updateMosquito(), this.checkOnEdge(!0)), this.isFade || (this.fadeTicker -= e, this.fadeTicker < 0 && (this.fadeTicker = 0, this.isFade = !0, this.node.runAction(cc.sequence(cc.fadeOut(.5), cc.callFunc(function (e) {
+          this.isUpdate && this.isUser && (this.updateMosquito(), this.checkOnEdge(!0)), this.isFade || (this.fadeTicker -= e, this.fadeTicker < 0 && (this.fadeTicker = 0, this.isFade = !0, this.node.runAction(cc.sequence(cc.fadeOut(.5), cc.callFunc(function (_e) {
           }, this)))))
-        }, t.prototype.updateMove_1 = function (e) {
+        }, t.prototype.updateMove_1 = function (_e) {
           this.dir = cc.v2(this.node.position).sub(this.newPos).normalize().neg();
           var t = 1 * (this.dir.x * this.mosquitoSpeedLen * 3),
             n = 1 * (this.dir.y * this.mosquitoSpeedLen * 3),
@@ -2478,7 +2469,7 @@ window.__require = function e(t, n, o) {
           this.node.x = o, this.node.y = c;
           var a = 180 * Math.atan2(this.dir.y, this.dir.x) / Math.PI;
           a = 360 - a + 90, this.node.angle = a
-        }, t.prototype.updateMove = function (e) {
+        }, t.prototype.updateMove = function (_e) {
           this.dir = cc.v2(this.node.position).sub(this.newPos).normalize().neg();
           var t = 1 * (this.dir.x * this.mosquitoSpeedLen),
             n = 1 * (this.dir.y * this.mosquitoSpeedLen),
@@ -2512,7 +2503,7 @@ window.__require = function e(t, n, o) {
     "./SpriteManager": "SpriteManager",
     "./Utils": "Utils"
   }],
-  RenderWater: [function (e, t, n) {
+  RenderWater: [function (_e, t, n) {
     "use strict";
     cc._RF.push(t, "ed67fc+jBJNaKKrcIP1lh6B", "RenderWater");
     var o = this && this.__extends || function () {
@@ -2578,7 +2569,7 @@ window.__require = function e(t, n, o) {
       }(cc.Component);
     n.default = s, cc._RF.pop()
   }, {}],
-  Rocker: [function (e, t, n) {
+  Rocker: [function (_e, t, n) {
     "use strict";
     cc._RF.push(t, "8d9fdeeLCdEi5Zh0PNydB+G", "Rocker");
     var o = this && this.__extends || function () {
@@ -2626,7 +2617,7 @@ window.__require = function e(t, n, o) {
       }(cc.Component);
     n.default = s, cc._RF.pop()
   }, {}],
-  RotateAround: [function (e, t, n) {
+  RotateAround: [function (_e, t, n) {
     "use strict";
     cc._RF.push(t, "d0683O41+dL0LiH0SbEMp2i", "RotateAround");
     var o, c = this && this.__extends || function () {
@@ -2721,7 +2712,7 @@ window.__require = function e(t, n, o) {
       }(cc.Component);
     n.default = l, cc._RF.pop()
   }, {}],
-  Shake: [function (e, t, n) {
+  Shake: [function (_e, t, _n) {
     "use strict";
     cc._RF.push(t, "ae84f5GUmxA6pQM/u/0FkbQ", "Shake");
     var o = cc.ActionInterval.extend({
@@ -2735,7 +2726,7 @@ window.__require = function e(t, n, o) {
       getRandomStrength: function (e, t) {
         return Math.random() * (t - e + 1) + e
       },
-      update: function (e) {
+      update: function (_e) {
         var t = this.getRandomStrength(-this.nodeShakeStrengthX, this.nodeShakeStrengthX) * cc.director.getDeltaTime(),
           n = this.getRandomStrength(-this.nodeShakeStrengthY, this.nodeShakeStrengthY) * cc.director.getDeltaTime();
         this.xOffset += t, this.yOffset += n, this.target.setPosition(this.target.position.add(cc.v2(t, n)))
@@ -2754,7 +2745,7 @@ window.__require = function e(t, n, o) {
       return new o(e, t, n)
     }, cc._RF.pop()
   }, {}],
-  SpriteManager: [function (e, t, n) {
+  SpriteManager: [function (_e, t, n) {
     "use strict";
     cc._RF.push(t, "4aec9V8qWdDa5TaF3chhmaO", "SpriteManager");
     var o = this && this.__extends || function () {
@@ -2814,7 +2805,7 @@ window.__require = function e(t, n, o) {
       }(cc.Component);
     n.default = s, cc._RF.pop()
   }, {}],
-  Stack: [function (e, t, n) {
+  Stack: [function (_e, t, n) {
     "use strict";
     cc._RF.push(t, "17b226CrNJGGYSBKYckUg+j", "Stack"), Object.defineProperty(n, "__esModule", {
       value: !0
@@ -2845,7 +2836,7 @@ window.__require = function e(t, n, o) {
     }();
     n.Stack = o, cc._RF.pop()
   }, {}],
-  Toast: [function (e, t, n) {
+  Toast: [function (_e, t, n) {
     "use strict";
     cc._RF.push(t, "4f5a7oIt7pFWaaZNA1+j7MV", "Toast"), Object.defineProperty(n, "__esModule", {
       value: !0
@@ -2878,7 +2869,7 @@ window.__require = function e(t, n, o) {
     }();
     n.Toast = o, cc._RF.pop()
   }, {}],
-  ToolsJs: [function (e, t, n) {
+  ToolsJs: [function (_e, t, _n) {
     "use strict";
     cc._RF.push(t, "ff72eImHHBFF7om5YuFkgbF", "ToolsJs");
     var o = {
@@ -2898,7 +2889,7 @@ window.__require = function e(t, n, o) {
       logJsonObject: function (e) {
         console.log(JSON.stringify(e))
       },
-      loadJson: function (e, t) {
+      loadJson: function (_e, _t) {
       },
       writeJson: function (e, t) {
         if (cc.sys.isBrowser) {
@@ -3005,7 +2996,7 @@ window.__require = function e(t, n, o) {
     };
     t.exports = o, cc._RF.pop()
   }, {}],
-  Utils: [function (e, t, n) {
+  Utils: [function (_e, t, n) {
     "use strict";
     cc._RF.push(t, "f3369tYECpPVJGWDo7sIHaO", "Utils"), Object.defineProperty(n, "__esModule", {
       value: !0
@@ -3163,7 +3154,7 @@ window.__require = function e(t, n, o) {
         var o = cc.v2(0, 0);
         return o.x = e.x + Math.sin(2 * Math.PI / 360 * n) * t, o.y = e.y + Math.cos(2 * Math.PI / 360 * n) * t, o
       }, e.upsetArr = function (e) {
-        return e.sort(function (e, t) {
+        return e.sort(function (_e, _t) {
           return Math.random() > .5 ? -1 : 1
         })
       }, e.getAudio = function (e, t) {
@@ -3264,7 +3255,7 @@ window.__require = function e(t, n, o) {
     }();
     n.default = o, cc._RF.pop()
   }, {}],
-  WallUpdate: [function (e, t, n) {
+  WallUpdate: [function (_e, t, n) {
     "use strict";
     cc._RF.push(t, "9f05e4uSUJBf7dp3DMjGgbj", "WallUpdate");
     var o = this && this.__extends || function () {
@@ -3306,7 +3297,7 @@ window.__require = function e(t, n, o) {
           return t.mainCamera = null, t.leftUpWall = null, t.leftDownWall = null, t.rightUpWall = null, t.rightDownWall = null, t
         }
 
-        return o(t, e), t.prototype.update = function (e) {
+        return o(t, e), t.prototype.update = function (_e) {
           if (this.leftUpWall.y - this.mainCamera.y > this.leftUpWall.height) {
             this.leftUpWall.y = this.leftDownWall.y - this.leftDownWall.height;
             var t = this.leftUpWall;
@@ -3321,7 +3312,7 @@ window.__require = function e(t, n, o) {
       }(cc.Component);
     n.default = s, cc._RF.pop()
   }, {}],
-  bfPrefabJs: [function (e, t, n) {
+  bfPrefabJs: [function (_e, t, _n) {
     "use strict";
     cc._RF.push(t, "813eeXgvcJG96hqXhg+nvJ0", "bfPrefabJs"), cc.Class({
       extends: cc.Component,
@@ -3366,7 +3357,7 @@ window.__require = function e(t, n, o) {
       update: function (e) {
         this.isUpdate && (this.isUser ? this.isTurn ? (this.updateMosquito(), this.checkOnEdge(!0)) : this.updateMove(e) : (this.updateMove_1(e), this.checkOnEdge(!1)))
       },
-      updateMove_1: function (e) {
+      updateMove_1: function (_e) {
         this.dir = other.getNormalizeVector(this.node.getPosition(), this.newPos);
         var t = 1 * (this.dir.x * this.mosquitoSpeedLen * 3),
           n = 1 * (this.dir.y * this.mosquitoSpeedLen * 3),
@@ -3376,7 +3367,7 @@ window.__require = function e(t, n, o) {
         var a = 180 * Math.atan2(this.dir.y, this.dir.x) / Math.PI;
         a = 360 - a + 90, this.node.angle = a
       },
-      updateMove: function (e) {
+      updateMove: function (_e) {
         this.dir = other.getNormalizeVector(this.node.getPosition(), cc.v2(0, 100));
         var t = 1 * (this.dir.x * this.mosquitoSpeedLen),
           n = 1 * (this.dir.y * this.mosquitoSpeedLen),
@@ -3491,7 +3482,7 @@ window.__require = function e(t, n, o) {
         }, t.prototype.getNumber = function () {
           var e = this.getNumberTime;
           return this.getNumberTime++, this.returnNumber = !0, e
-        }, t.prototype.onBeginContact = function (e, t, n) {
+        }, t.prototype.onBeginContact = function (_e, t, n) {
           var o = this;
           if ("downwall" == n.node.group && (t.node.parent = cc.find("Canvas/fruitNode"), 0 == this.wallColl && (d.default.Instance.Play(5, !1, 1), this.wallColl++)), "fruit" == n.node.group) {
             if (this.endCtrl = !0, t.node.y < n.node.y) return;
@@ -3560,7 +3551,7 @@ window.__require = function e(t, n, o) {
           e.position = cc.v2(s.default.RandomInteger(n, t), o), e.runAction(cc.fadeOut(2))
         }, t.prototype.planeBoomEffect = function () {
           r.default.Spawn("boom", cc.find("Canvas/upEffectParent")).position = s.default.convetOtherNodeSpaceAR(this.node, cc.find("Canvas/upEffectParent"))
-        }, t.prototype.clockEoilffect = function (e, t) {
+        }, t.prototype.clockEoilffect = function (e, _t) {
           for (var n = 0; n < 3; n++) setTimeout(function () {
             var t = r.default.Spawn("star", cc.find("Canvas/upEffectParent"));
             t.position = e.position, t.scale = .3, t.runAction(cc.sequence(cc.scaleTo(.5, 1.1), cc.fadeOut(.5)))
@@ -3580,7 +3571,7 @@ window.__require = function e(t, n, o) {
     "./GameFunction": "GameFunction",
     "./MainGameUi": "MainGameUi"
   }],
-  gameOverJs: [function (e, t, n) {
+  gameOverJs: [function (e, t, _n) {
     "use strict";
     cc._RF.push(t, "3621brbM61BsYFG7fM/74TL", "gameOverJs");
     var o = e("GameUiTools"),
@@ -3650,14 +3641,14 @@ window.__require = function e(t, n, o) {
       },
       addClickBtns: function () {
         var e = this;
-        e.moreBtn.node.on(cc.Node.EventType.TOUCH_START, function (e) {
-        }), e.moreBtn.node.on(cc.Node.EventType.TOUCH_END, function (e) {
-          console.log("MoreGame"), window.location.href = a.moreGameUrl
-        }), e.leftBtn.node.on(cc.Node.EventType.TOUCH_START, function (e) {
-        }), e.leftBtn.node.on(cc.Node.EventType.TOUCH_END, function (e) {
+        e.moreBtn.node.on(cc.Node.EventType.TOUCH_START, function (_e) {
+        }), e.moreBtn.node.on(cc.Node.EventType.TOUCH_END, function (_e) {
+          console.log("MoreGame")
+        }), e.leftBtn.node.on(cc.Node.EventType.TOUCH_START, function (_e) {
+        }), e.leftBtn.node.on(cc.Node.EventType.TOUCH_END, function (_e) {
           c.GAME_OVER_BOOL = !0, c.gameScore = 0, o.loadingScene("MainGameScene")
-        }), e.rightBtn.node.on(cc.Node.EventType.TOUCH_START, function (e) {
-        }), e.rightBtn.node.on(cc.Node.EventType.TOUCH_END, function (t) {
+        }), e.rightBtn.node.on(cc.Node.EventType.TOUCH_START, function (_e) {
+        }), e.rightBtn.node.on(cc.Node.EventType.TOUCH_END, function (_t) {
           var n = null;
           n = null != e.rightBtnGameUrl && "" != e.rightBtnGameUrl ? e.rightBtnGameUrl : e.tempArr[1], window.location.href = n
         })
@@ -3714,7 +3705,7 @@ window.__require = function e(t, n, o) {
     GameUiTools: "GameUiTools",
     MainManage: "MainManage"
   }],
-  linkHttpIconJs: [function (e, t, n) {
+  linkHttpIconJs: [function (e, t, _n) {
     "use strict";
     cc._RF.push(t, "95474fr0oNDP7SAidILF03q", "linkHttpIconJs");
     var o = e("MainManage"),
@@ -3735,9 +3726,9 @@ window.__require = function e(t, n, o) {
             a = this.iconSpr,
             i = this.iconSpr1,
             r = this;
-          cc.loader.load(n, function (n, o) {
+          cc.loader.load(n, function (_n, o) {
             a.getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(o), r.iconSpr.opacity = 0, r.iconSpr.x = e, r.iconSpr.y = t, r._imageArr.push(r.iconSpr)
-          }), cc.loader.load(c, function (n, o) {
+          }), cc.loader.load(c, function (_n, o) {
             i.getComponent(cc.Sprite).spriteFrame = new cc.SpriteFrame(o), r.iconSpr1.opacity = 0, r.iconSpr1.x = e, r.iconSpr1.y = t, r._imageArr.push(r.iconSpr1)
           })
         }
@@ -3765,7 +3756,7 @@ window.__require = function e(t, n, o) {
         var e = this,
           t = {
             event: cc.EventListener.TOUCH_ONE_BY_ONE,
-            onTouchBegan: function (t, n) {
+            onTouchBegan: function (t, _n) {
               var a = t.getLocation();
               if (e._imageArr.length >= 2) {
                 var i = Math.abs(a.x - e.gameWidth / 2 - e._imageArr[0].x),
@@ -3776,14 +3767,14 @@ window.__require = function e(t, n, o) {
               }
               return !0
             },
-            onTouchMoved: function (e, t) {
+            onTouchMoved: function (_e, _t) {
             },
-            onTouchEnded: function (e, t) {
+            onTouchEnded: function (_e, _t) {
             }
           };
         cc.EventTarget.call(t, e.node)
       },
-      update: function (e) {
+      update: function (_e) {
         this.stopUpdateBool && this._imageArr.length >= 2 && (this.stopUpdateBool = !1, this.showLinkPic())
       }
     }), cc._RF.pop()
@@ -3857,8 +3848,8 @@ window.__require = function e(t, n, o) {
           }))), e.runAction(cc.repeatForever(cc.rotateBy(3, 1080)))
         }, t.prototype.onCollisionEnter = function (e, t) {
           "shell" == e.node.group && 2 == e.node.getComponent("shellData").shellLife ? e.node.getComponent("shellData").shellLife -= 1 : "shell" == e.node.group && 1 == e.node.getComponent("shellData").shellLife && (u.default.Instance.Play(2, !1, 1), t.node.active = !1, s.default.Instance.cannonNodeArr[this.cannonNumber] = 0, this.createCannonSui(t.node), e.node.stopAllActions(), i.default.score += 10, l.default.Instance.SetScoreTween(i.default.score), r.default.Despawn("shell", e.node), r.default.Despawn("peaCannon", t.node))
-        }, t.prototype.onCollisionStay = function (e, t) {
-        }, t.prototype.onCollisionExit = function (e, t) {
+        }, t.prototype.onCollisionStay = function (_e, _t) {
+        }, t.prototype.onCollisionExit = function (_e, _t) {
         }, t.prototype.createCannonSui = function (e) {
           var t = cc.instantiate(this.peaSuiPre);
           t.parent = cc.find("Canvas/targetBoomNode"), t.position = e.position, t.scale = e.scale, t.angle = e.angle;
@@ -3876,7 +3867,7 @@ window.__require = function e(t, n, o) {
     "./GameFunction": "GameFunction",
     "./MainGameUi": "MainGameUi"
   }],
-  resArr: [function (e, t, n) {
+  resArr: [function (_e, t, _n) {
     "use strict";
     cc._RF.push(t, "8a68e/WQz1Feo++msjg6z8R", "resArr"), cc.Class({
       extends: cc.Component,
@@ -3925,7 +3916,7 @@ window.__require = function e(t, n, o) {
       }
     }), cc._RF.pop()
   }, {}],
-  startGameJs: [function (e, t, n) {
+  startGameJs: [function (e, t, _n) {
     "use strict";
     cc._RF.push(t, "280c3rsZJJKnZ9RqbALVwtK", "startGameJs");
     var o = e("GameUiTools"),
@@ -3938,24 +3929,24 @@ window.__require = function e(t, n, o) {
         startT: cc.Label
       },
       onLoad: function () {
-        a.publicGameBool && c.init(), this.showInfoT.string = c.gameInfoText, this.startT.string = c.txtStartText, this.node.on("touchend", function (e) {
+        a.publicGameBool && c.init(), this.showInfoT.string = c.gameInfoText, this.startT.string = c.txtStartText, this.node.on("touchend", function (_e) {
           this.node.x = -2e3
         }, this)
       },
       addTouchEvents: function () {
         var e = {
           event: cc.EventListener.TOUCH_ONE_BY_ONE,
-          onTouchBegan: function (e, t) {
+          onTouchBegan: function (_e, _t) {
             return o.loadingScene("MainGameScene"), !0
           },
-          onTouchMoved: function (e, t) {
+          onTouchMoved: function (_e, _t) {
           },
-          onTouchEnded: function (e, t) {
+          onTouchEnded: function (_e, _t) {
           }
         };
         cc.eventManager.addListener(e, this.node)
       },
-      update: function (e) {
+      update: function (_e) {
       }
     }), cc._RF.pop()
   }, {
@@ -4037,7 +4028,7 @@ window.__require = function e(t, n, o) {
     "../Common/Utils": "Utils",
     "../commonJs/GameConfig": "GameConfig"
   }],
-  "use_v2.1.x_cc.Action": [function (e, t, n) {
+  "use_v2.1.x_cc.Action": [function (_e, t, _n) {
     "use strict";
     cc._RF.push(t, "ce2acozQx1Dq7kOhKg5RkBi", "use_v2.1.x_cc.Action"), cc.macro.ROTATE_ACTION_CCW = !0, cc._RF.pop()
   }, {}],
@@ -4084,7 +4075,7 @@ window.__require = function e(t, n, o) {
         }
 
         return o(t, e), t.prototype.onLoad = function () {
-        }, t.prototype.update = function (e) {
+        }, t.prototype.update = function (_e) {
           this.isMove && (this.node.x += a.default.Instance.lvdaiSpeed)
         }, t = c([r], t)
       }(cc.Component));
@@ -4143,7 +4134,7 @@ window.__require = function e(t, n, o) {
         return o(t, e), t.prototype.onLoad = function () {
           this.wineColorStr1.push("eba51f", "eba51f", "eba51f", "eba51f", "87c5ff", "87c5ff", "87c5ff", "87c5ff", "87c5ff", "87c5ff"), this.wineColorStr2.push("fed74a", "fed74a", "fed74a", "fed74a", "b7fbff", "b7fbff", "b7fbff", "b7fbff", "b7fbff", "b7fbff")
         }, t.prototype.start = function () {
-        }, t.prototype.update = function (e) {
+        }, t.prototype.update = function (_e) {
           this.isMove && (this.node.x += l.default.Instance.lvdaiSpeed), this.node.x >= 500 && i.default.Despawn(this.node.name, this.node)
         }, t.prototype.onCollisionEnter = function (e, t) {
           "wine" == e.node.group && (this.createWineSa(t.node), this.createWineSuiPian(t.node), t.node.active = !1, a.default.playerTouch && (u.default.Instance.ToEnd(), a.default.playerTouch = !1))
